@@ -7,484 +7,410 @@
     
     <title>Epoxy Flooring Orlando | Garage Floor Coatings in Orlando, FL</title>
     
-    <!-- styles.css -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#0f172a',    /* Slate 900 */
-                            primary: '#2563eb', /* Blue 600 */
-                            accent: '#f59e0b',  /* Amber 500 */
-                            light: '#f8fafc',   /* Slate 50 */
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
 
     
-</head>
-<body class="font-sans text-slate-800 bg-slate-50 antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo area -->
-                <div class="flex-shrink-0 flex items-center">
-                    <div class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white text-xl font-bold mr-3">
-                        <i class="fa-solid fa-layer-group"></i>
+    </head>
+    <body class="font-sans text-slate-800 bg-slate-50 antialiased pb-20 md:pb-0"> 
+        <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <div class="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white text-xl font-bold mr-3">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-slate-900">City<span class="text-brand-primary">Epoxy</span></span>
                     </div>
-                    <span class="font-bold text-2xl tracking-tight text-slate-900">City<span class="text-brand-primary">Epoxy</span></span>
-                </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#features" class="text-slate-600 hover:text-brand-primary font-medium transition">Why Us</a>
-                    <a href="#services" class="text-slate-600 hover:text-brand-primary font-medium transition">Services</a>
-                    <a href="#gallery" class="text-slate-600 hover:text-brand-primary font-medium transition">Gallery</a>
-                    <a href="#testimonials" class="text-slate-600 hover:text-brand-primary font-medium transition">Reviews</a>
-                    <a href="#quote" class="bg-brand-accent hover:bg-amber-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-amber-500/30 transition transform hover:-translate-y-0.5">
+                    <div class="hidden md:flex space-x-8 items-center">
+                        <a href="#features" class="text-slate-600 hover:text-brand-primary font-medium transition">Why Us</a>
+                        <a href="#services" class="text-slate-600 hover:text-brand-primary font-medium transition">Services</a>
+                        <a href="#gallery" class="text-slate-600 hover:text-brand-primary font-medium transition">Gallery</a>
+                        <a href="#testimonials" class="text-slate-600 hover:text-brand-primary font-medium transition">Reviews</a>
+                        <a href="#quote" class="bg-brand-accent hover:bg-amber-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-amber-500/30 transition transform hover:-translate-y-0.5">
+                            Get Free Quote
+                        </a>
+                    </div>
+
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2" aria-label="Menu">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+                <div class="px-4 pt-2 pb-6 space-y-2">
+                    <a href="#features" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-slate-50">Why Us</a>
+                    <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-slate-50">Services</a>
+                    <a href="#gallery" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-slate-50">Gallery</a>
+                    <a href="#quote" class="block w-full text-center mt-4 bg-brand-accent text-white px-5 py-3 rounded-lg font-bold shadow-md">
                         Get Free Quote
                     </a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
             </div>
-        </div>
+        </nav>
 
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
-                <a href="#features" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-slate-50">Why Us</a>
-                <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-slate-50">Services</a>
-                <a href="#gallery" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-brand-primary hover:bg-slate-50">Gallery</a>
-                <a href="#quote" class="block w-full text-center mt-4 bg-brand-accent text-white px-5 py-3 rounded-lg font-bold shadow-md">
-                    Get Free Quote
-                </a>
-            </div>
-        </div>
-    </nav>
+        <section class="hero-bg relative min-h-screen flex items-center pt-20">
+            <div class="absolute inset-0 bg-slate-900/60 z-0 pointer-events-none"></div>
 
-    <!-- Hero Section -->
-    <section class="hero-bg relative min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Hero Text -->
-                <div class="text-center md:text-left space-y-6 animate-fade-in-up">
-                    <!-- <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-900/50 border border-blue-500/30 text-blue-100 text-sm font-medium mb-2">
-                        <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
-                        Available for bookings in Orlando
-                    </div> -->
-                    <h2 class="text-brand-accent font-bold uppercase tracking-wide mb-2">
-                        Premier Epoxy Flooring in Orlando
-                    </h2>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 relative z-10">
+                <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+                    
+                    <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-600 backdrop-blur-sm mb-4">
+                        <span class="flex h-2 w-2 relative mr-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="text-slate-200 text-sm font-medium tracking-wide uppercase">Taking Bookings for Orlando</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
                         Transform Your Concrete into a <span class="text-brand-accent">Showroom</span>.
                     </h1>
-                    <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto md:mx-0">
+                    
+                    <p class="text-xl md:text-2xl text-slate-200 max-w-2xl mx-auto font-medium leading-relaxed">
                         Premium epoxy floor coatings for garages, basements, and commercial spaces. Durable, beautiful, and installed in as little as 24 hours.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                        <a href="#quote" class="bg-brand-primary hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-1 flex items-center justify-center">
-                            Request Free Estimate
-                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                    
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center pt-6">
+                        <a href="#quote" class="bg-brand-primary hover:bg-blue-600 text-white text-lg px-10 py-5 rounded-xl font-bold shadow-xl shadow-blue-900/20 transition transform hover:-translate-y-1 flex items-center justify-center">
+                            Get My Price
+                            <i class="fa-solid fa-arrow-down ml-2"></i>
                         </a>
-                        <a href="tel:+15551234567" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white text-lg px-8 py-4 rounded-lg font-bold transition flex items-center justify-center">
+                        <a href="tel:+15551234567" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-lg px-10 py-5 rounded-xl font-bold transition flex items-center justify-center">
                             <i class="fa-solid fa-phone mr-2"></i> (555) 123-4567
                         </a>
                     </div>
-                    <div class="pt-6 flex items-center justify-center md:justify-start gap-6 text-sm text-slate-400 font-medium">
-                        <div class="flex items-center"><i class="fa-solid fa-shield-halved text-brand-accent mr-2"></i> Lifetime Warranty</div>
-                        <div class="flex items-center"><i class="fa-solid fa-clock text-brand-accent mr-2"></i> 1-Day Install</div>
+
+                    <div class="pt-8 flex flex-wrap items-center justify-center gap-6 md:gap-10 text-sm md:text-base text-slate-300 font-medium opacity-90">
+                        <div class="flex items-center"><i class="fa-solid fa-shield-halved text-brand-accent mr-2 text-lg"></i> Lifetime Warranty</div>
+                        <div class="flex items-center"><i class="fa-solid fa-clock text-brand-accent mr-2 text-lg"></i> Done in 24 Hours</div>
+                        <div class="flex items-center"><i class="fa-solid fa-check-circle text-brand-accent mr-2 text-lg"></i> Licensed & Insured</div>
                     </div>
-                </div>
 
-                <!-- Hero Form (Desktop Only - Optional, often increases conversion) -->
-                <div class="hidden md:block">
-                    <div class="glass-card p-8 rounded-2xl shadow-2xl border-t border-white/20 transform rotate-1 hover:rotate-0 transition duration-500">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Get Your Price</h3>
-                        <p class="text-slate-600 mb-6 text-sm">Fill out the form below for a fast, no-obligation quote.</p>
-                        <form onsubmit="event.preventDefault(); showSuccess(this);" class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Name</label>
-                                <input type="text" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-300 bg-white/80 focus:bg-white transition" placeholder="John Doe">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone</label>
-                                <input type="tel" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-300 bg-white/80 focus:bg-white transition" placeholder="(555) 123-4567">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Project Type</label>
-                                <select class="input-field w-full px-4 py-3 rounded-lg border border-slate-300 bg-white/80 focus:bg-white transition">
-                                    <option>2-Car Garage</option>
-                                    <option>3-Car Garage</option>
-                                    <option>Basement</option>
-                                    <option>Patio/Outdoor</option>
-                                    <option>Commercial Space</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="w-full bg-brand-accent hover:bg-amber-600 text-white font-bold py-4 rounded-lg shadow-lg transition mt-2">
-                                Get Instant Quote
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Wave Divider -->
-        <!-- <div class="absolute bottom-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-full h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-slate-50"></path>
-            </svg>
-        </div> -->
-    </section>
-
-    <!-- Features / Value Prop -->
-    <section id="features" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose Epoxy?</h2>
-                <p class="text-lg text-slate-600">Standard concrete is porous, stains easily, and cracks. Our industrial-grade coatings solve that permanently.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-brand-primary text-2xl mb-6">
-                        <i class="fa-solid fa-dumbbell"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Extreme Durability</h3>
-                    <p class="text-slate-600">Resistant to chemicals, oil spills, tire marks, and heavy impact. Designed to last 15+ years.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-brand-accent text-2xl mb-6">
-                        <i class="fa-solid fa-broom"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Easy Maintenance</h3>
-                    <p class="text-slate-600">Seamless surface that wipes clean. No more dust, no more stains. Just soap and water.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6">
-                        <i class="fa-solid fa-rocket"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">1-Day Installation</h3>
-                    <p class="text-slate-600">Our polyaspartic topcoats cure fast. We can prep, coat, and finish your garage in a single day.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div class="max-w-2xl">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Coating Services</h2>
-                    <p class="text-lg text-slate-600">We don't just do garages. We transform any concrete surface.</p>
-                </div>
-                <a href="#quote" class="hidden md:inline-flex items-center font-bold text-brand-primary hover:text-blue-700 transition mt-4 md:mt-0">
-                    Request Free Estimate <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!--  Garage Floors -->
-                <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md">
-                    <img src="./assets/images/Garage_EpoxyCity.png" alt="Garage Floor" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Garage Floors</h3>
-                        <p class="text-slate-200 mb-4 translate-y-0">The ultimate upgrade for your home. Clean, bright, and valuable.</p>
-                        <span class="text-brand-accent font-bold text-sm uppercase tracking-wider cursor-pointer"><a href="#quote">Learn More</a></span>
-                    </div>
-                </div>
-
-                <!-- Pool Decks -->
-                <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md">
-                    <img src="./assets/images/PoolDeck_EpoxyCity.png" alt="Pool Deck" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Pool Decks</h3>
-                        <p class="text-slate-200 mb-4 translate-y-0">Heat-resistant coatings that are comfortable for bare feet.</p>
-                        <span class="text-brand-accent font-bold text-sm uppercase tracking-wider cursor-pointer"><a href="#quote">Learn More</a></span>
-                    </div>
-                </div>
-
-                <!--  Patio Decks -->
-                <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md">
-                    <img src="./assets/images/PatioDeck_EpoxyCity.png" alt="Patio" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Patio Decks</h3>
-                        <p class="text-slate-200 mb-4 translate-y-0">Beautiful finishes for your outdoor entertaining areas.</p>
-                        <span class="text-brand-accent font-bold text-sm uppercase tracking-wider cursor-pointer"><a href="#quote">Learn More</a></span>
-                    </div>
-                </div>
-
-                <!--  Driveways   -->
-                <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md">
-                    <img src="./assets/images/Driveway_EpoxyCity.png" alt="Driveway" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Driveways</h3>
-                        <p class="text-slate-200 mb-4 translate-y-0">Instant curb appeal. UV-stable coatings that won't yellow in the sun.</p>
-                        <span class="text-brand-accent font-bold text-sm uppercase tracking-wider cursor-pointer"><a href="#quote">Learn More</a></span>
-                    </div>
-                </div>
-
-                <!-- Sidewalks & Walkways  -->
-                <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md">
-                    <img src="./assets/images/Sidewalk_EpoxyCity.png" alt="Sidewalk" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Sidewalks</h3>
-                        <p class="text-slate-200 mb-4 translate-y-0">Slip-resistant textures to keep your family and guests safe.</p>
-                        <span class="text-brand-accent font-bold text-sm uppercase tracking-wider cursor-pointer"><a href="#quote">Learn More</a></span>
-                    </div>
-                </div>
-
-                
-
-                <!-- Commercial  -->
-                <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md">
-                    <img src="./assets/images/Commercial_EpoxyCity.png" alt="Commercial" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-2xl font-bold text-white mb-2">Commercial</h3>
-                        <p class="text-slate-200 mb-4 translate-y-0">Industrial strength for warehouses, showrooms, and kitchens.</p>
-                        <span class="text-brand-accent font-bold text-sm uppercase tracking-wider cursor-pointer"><a href="#quote">Learn More</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats / Trust Bar -->
-    <section class="bg-brand-dark py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-4xl font-extrabold text-white mb-2">500+</div>
-                    <div class="text-slate-400 font-medium">Floors Installed</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-extrabold text-white mb-2">15yr</div>
-                    <div class="text-slate-400 font-medium">Warranty</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-extrabold text-white mb-2">100%</div>
-                    <div class="text-slate-400 font-medium">Satisfaction</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-extrabold text-white mb-2">4.9</div>
-                    <div class="text-slate-400 font-medium">Star Rating</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Grid -->
-    <section id="gallery" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">Portfolio</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Recent Transformations</h2>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
-                <!-- Large item -->
-                <div class="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
-                    <img src="./assets/images/ShowRoom_EpoxyCity.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Epoxy work">
-                </div>
-                <!-- Standard items -->
-                <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
-                    <img src="./assets/images/PoolDeckFlakeJob_EpoxyCity.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Epoxy flake">
-                </div>
-                <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
-                    <img src="./assets/images/ManCave_EpoxyCity.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Metallic epoxy">
-                </div>
-                <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
-                    <img src="./assets/images/KitchenCounters_EpoxyCity.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Residential kitchen">
-                </div>
-                <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
-                    <img src="./assets/images/WorkShop_EpoxyCity.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Workshop floor">
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <a href="#quote" class="inline-flex items-center text-slate-600 font-semibold hover:text-brand-primary transition">
-                    Request Free Estimate <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+            
+        </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">What Our Neighbors Say</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-slate-50 p-8 rounded-2xl">
-                    <div class="flex text-amber-400 mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <section id="gallery" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">Portfolio</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Recent Transformations</h2>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                    <div class="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
+                        <img src="./assets/images/ShowRoom_EpoxyCity.png" loading="lazy" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Epoxy work">
                     </div>
-                    <p class="text-slate-600 mb-6 italic">"My garage looks like a car showroom now. The team was on time, professional, and cleaned up everything. Best investment for my house."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold mr-3">M</div>
-                        <div>
-                            <div class="font-bold text-slate-900">Mike Thompson</div>
-                            <div class="text-xs text-slate-500">Homeowner</div>
-                        </div>
+                    <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+                        <img src="./assets/images/PoolDeckFlakeJob_EpoxyCity.png" loading="lazy" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Epoxy flake">
+                    </div>
+                    <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+                        <img src="./assets/images/ManCave_EpoxyCity.png" loading="lazy" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Metallic epoxy">
+                    </div>
+                    <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+                        <img src="./assets/images/KitchenCounters_EpoxyCity.png" loading="lazy" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Residential kitchen">
+                    </div>
+                    <div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative group">
+                        <img src="./assets/images/WorkShop_EpoxyCity.png" loading="lazy" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Workshop floor">
                     </div>
                 </div>
-                 <!-- Review 2 -->
-                 <div class="bg-slate-50 p-8 rounded-2xl">
-                    <div class="flex text-amber-400 mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-600 mb-6 italic">"We needed our warehouse floor redone over the weekend to avoid downtime. They worked through the night to get it done. Incredible service."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold mr-3">S</div>
-                        <div>
-                            <div class="font-bold text-slate-900">Sarah Jenkins</div>
-                            <div class="text-xs text-slate-500">Business Owner</div>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Review 3 -->
-                 <div class="bg-slate-50 p-8 rounded-2xl">
-                    <div class="flex text-amber-400 mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-600 mb-6 italic">"Price was fair and the quality is unmatched. I dropped a heavy wrench on it the other day and not a scratch. Highly recommend."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold mr-3">D</div>
-                        <div>
-                            <div class="font-bold text-slate-900">David Ross</div>
-                            <div class="text-xs text-slate-500">Homeowner</div>
-                        </div>
-                    </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#quote" class="inline-flex items-center text-slate-600 font-semibold hover:text-brand-primary transition">
+                        View More Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Main Quote Section (Footer Anchor) -->
-    <section id="quote" class="py-24 bg-brand-dark relative overflow-hidden">
-        <!-- Background decorative blob -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <section id="services" class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Coating Services</h2>
+                        <p class="text-lg text-slate-600">We don't just do garages. We transform any concrete surface.</p>
+                    </div>
+                    <a href="#quote" class="hidden md:inline-flex items-center font-bold text-brand-primary hover:text-blue-700 transition mt-4 md:mt-0">
+                        Request Free Estimate <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
 
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <div class="grid md:grid-cols-5">
-                    <div class="md:col-span-2 bg-slate-100 p-10 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Contact Us</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-location-dot text-brand-primary mt-1 mr-3"></i>
-                                    <span class="text-slate-600">Serving Orlando and surrounding areas</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fa-solid fa-phone text-brand-primary mr-3"></i>
-                                    <span class="text-slate-600 font-bold">(555) 123-4567</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fa-solid fa-envelope text-brand-primary mr-3"></i>
-                                    <span class="text-slate-600">quotes@cityepoxy.com</span>
-                                </div>
-                            </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md cursor-pointer" onclick="window.location.href='#quote'">
+                        <img src="./assets/images/Garage_EpoxyCity.png" loading="lazy" alt="Garage Floor" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Garage Floors</h3>
+                            <p class="text-slate-200 mb-4 translate-y-0">The ultimate upgrade. Clean, bright, and valuable.</p>
+                            <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Get Quote</span>
                         </div>
-                        <div class="mt-8">
-                            <p class="text-xs text-slate-500 leading-relaxed">
-                                Privacy Guaranteed. We never share your information. Licensed & Insured.
-                            </p>
+                    </div>
+
+                    <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md cursor-pointer" onclick="window.location.href='#quote'">
+                        <img src="./assets/images/PoolDeck_EpoxyCity.png" loading="lazy" alt="Pool Deck" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Pool Decks</h3>
+                            <p class="text-slate-200 mb-4 translate-y-0">Heat-resistant coatings comfortable for bare feet.</p>
+                            <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Get Quote</span>
                         </div>
+                    </div>
+
+                    <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md cursor-pointer" onclick="window.location.href='#quote'">
+                        <img src="./assets/images/PatioDeck_EpoxyCity.png" loading="lazy" alt="Patio" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Patio Decks</h3>
+                            <p class="text-slate-200 mb-4 translate-y-0">Beautiful finishes for your outdoor entertaining areas.</p>
+                            <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Get Quote</span>
+                        </div>
+                    </div>
+
+                    <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md cursor-pointer" onclick="window.location.href='#quote'">
+                        <img src="./assets/images/Driveway_EpoxyCity.png" loading="lazy" alt="Driveway" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Driveways</h3>
+                            <p class="text-slate-200 mb-4 translate-y-0">Instant curb appeal. UV-stable coatings.</p>
+                            <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Get Quote</span>
+                        </div>
+                    </div>
+
+                    <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md cursor-pointer" onclick="window.location.href='#quote'">
+                        <img src="./assets/images/Sidewalk_EpoxyCity.png" loading="lazy" alt="Sidewalk" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Sidewalks</h3>
+                            <p class="text-slate-200 mb-4 translate-y-0">Slip-resistant textures for safety.</p>
+                            <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Get Quote</span>
+                        </div>
+                    </div>
+
+                    <div class="group rounded-2xl overflow-hidden relative h-80 shadow-md cursor-pointer" onclick="window.location.href='#quote'">
+                        <img src="./assets/images/Commercial_EpoxyCity.png" loading="lazy" alt="Commercial" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Commercial</h3>
+                            <p class="text-slate-200 mb-4 translate-y-0">Industrial strength for warehouses and showrooms.</p>
+                            <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Get Quote</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose Epoxy?</h2>
+                    <p class="text-lg text-slate-600">Standard concrete is porous, stains easily, and cracks. Our industrial-grade coatings solve that permanently.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-brand-primary text-2xl mb-6">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Extreme Durability</h3>
+                        <p class="text-slate-600">Resistant to chemicals, oil spills, tire marks, and heavy impact. Designed to last 15+ years.</p>
                     </div>
                     
-                    <div class="md:col-span-3 p-10">
-                        <h2 class="text-3xl font-bold text-slate-900 mb-2">Get A Free Quote</h2>
-                        <p class="text-slate-500 mb-8">Fill out the form and we will contact you within 24 hours.</p>
-                        
-                        <form onsubmit="event.preventDefault(); showSuccess(this);" class="space-y-5">
-                            <div class="grid md:grid-cols-2 gap-5">
-                                <input type="text" placeholder="First Name" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
-                                <input type="text" placeholder="Last Name" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
-                            </div>
-                            <input type="email" placeholder="Email Address" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
-                            <input type="tel" placeholder="Phone Number" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
-                            <select class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white text-slate-500">
-                                <option>Service Needed...</option>
-                                <option>Garage Floor</option>
-                                <option>Basement Floor</option>
-                                <option>Commercial Space</option>
-                                <option>Other</option>
-                            </select>
-                            <button type="submit" class="w-full bg-brand-primary hover:bg-blue-700 text-white font-bold py-4 rounded-lg shadow-lg transition transform active:scale-95">
-                                Send Request
-                            </button>
-                        </form>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-brand-accent text-2xl mb-6">
+                            <i class="fa-solid fa-broom"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Easy Maintenance</h3>
+                        <p class="text-slate-600">Seamless surface that wipes clean. No more dust, no more stains. Just soap and water.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">1-Day Installation</h3>
+                        <p class="text-slate-600">Our polyaspartic topcoats cure fast. We can prep, coat, and finish your garage in a single day.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <span class="font-bold text-2xl text-white">City<span class="text-brand-primary">Epoxy</span></span>
-                    <p class="text-sm mt-2">Professional Floor Coatings.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook text-xl"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+        
+
+        <section class="bg-brand-dark py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-extrabold text-white mb-2">500+</div>
+                        <div class="text-slate-400 font-medium">Floors Installed</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold text-white mb-2">15yr</div>
+                        <div class="text-slate-400 font-medium">Warranty</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold text-white mb-2">100%</div>
+                        <div class="text-slate-400 font-medium">Satisfaction</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold text-white mb-2">4.9</div>
+                        <div class="text-slate-400 font-medium">Star Rating</div>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-slate-800 mt-8 pt-8 text-center md:text-left text-sm">
-                &copy; 2024 City Epoxy Flooring. All rights reserved.
+        </section>
+
+        
+
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">What Our Neighbors Say</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm">
+                        <div class="flex text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-6 italic">"My garage looks like a car showroom now. The team was on time, professional, and cleaned up everything. Best investment for my house."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold mr-3">M</div>
+                            <div>
+                                <div class="font-bold text-slate-900">Mike Thompson</div>
+                                <div class="text-xs text-slate-500">Homeowner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm">
+                        <div class="flex text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-6 italic">"We needed our warehouse floor redone over the weekend to avoid downtime. They worked through the night to get it done. Incredible service."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold mr-3">S</div>
+                            <div>
+                                <div class="font-bold text-slate-900">Sarah Jenkins</div>
+                                <div class="text-xs text-slate-500">Business Owner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm">
+                        <div class="flex text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-6 italic">"Price was fair and the quality is unmatched. I dropped a heavy wrench on it the other day and not a scratch. Highly recommend."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-slate-500 font-bold mr-3">D</div>
+                            <div>
+                                <div class="font-bold text-slate-900">David Ross</div>
+                                <div class="text-xs text-slate-500">Homeowner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="quote" class="py-24 bg-brand-dark relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="grid md:grid-cols-5">
+                        <div class="md:col-span-2 bg-slate-100 p-10 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">Contact Us</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i class="fa-solid fa-location-dot text-brand-primary mt-1 mr-3"></i>
+                                        <span class="text-slate-600">Serving Orlando and surrounding areas</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fa-solid fa-phone text-brand-primary mr-3"></i>
+                                        <span class="text-slate-600 font-bold">(555) 123-4567</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fa-solid fa-envelope text-brand-primary mr-3"></i>
+                                        <span class="text-slate-600">quotes@cityepoxy.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <p class="text-xs text-slate-500 leading-relaxed">
+                                    Privacy Guaranteed. We never share your information. Licensed & Insured.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="md:col-span-3 p-10">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Get A Free Quote</h2>
+                            <p class="text-slate-500 mb-8">Fill out the form and we will contact you within 24 hours.</p>
+                            
+                            <form id="main-quote-form" onsubmit="event.preventDefault(); handleFormSubmit(this);" class="space-y-4">
+                                <input type="text" name="name" placeholder="Full Name" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
+                                
+                                <input type="tel" name="phone" placeholder="Phone Number" required class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
+                                
+                                <input type="email" name="email" placeholder="Email Address" class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white">
+                                
+                                <select name="service" class="input-field w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white text-slate-500">
+                                    <option>Service Needed...</option>
+                                    <option>Garage Floor</option>
+                                    <option>Commercial</option>
+                                    <option>Patio/Pool</option>
+                                </select>
+                                
+                                <button type="submit" class="w-full bg-brand-accent hover:bg-amber-600 text-white font-bold py-4 rounded-lg shadow-lg transition transform active:scale-95 text-lg uppercase tracking-wide">
+                                    Get My Free Quote
+                                </button>
+                                <p class="text-center text-xs text-slate-400 mt-2"><i class="fa-solid fa-lock"></i> Your info is safe. No spam.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pb-20 bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <span class="font-bold text-2xl text-white">City<span class="text-brand-primary">Epoxy</span></span>
+                        <p class="text-sm mt-2">Professional Floor Coatings.</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                <div class="border-t border-slate-800 mt-8 pt-8 text-center md:text-left text-sm">
+                    &copy; 2024 City Epoxy Flooring. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+        <div class="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-3 md:hidden z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex gap-3">
+            <a href="tel:+15551234567" class="flex-1 bg-slate-800 text-white font-bold py-3 rounded-lg text-center shadow-sm flex items-center justify-center active:bg-slate-900">
+                <i class="fa-solid fa-phone mr-2"></i> Call Now
+            </a>
+            <a href="#quote" class="flex-1 bg-brand-accent text-white font-bold py-3 rounded-lg text-center shadow-sm flex items-center justify-center active:bg-amber-600">
+                Get Price
+            </a>
         </div>
-    </footer>
 
-    <script src="index.js"></script>
+        <script src="index.js"></script>
 
-</body>
+    </body>
 </html>
